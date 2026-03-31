@@ -1,66 +1,91 @@
 export const appConfig = {
-  // Personal info
   name: "Ayush Ambatkar",
-  title: "A passionate developer crafting beautiful digital experiences. I build things that live on the internet.",
+  title: "Software Engineer focused on building scalable backend systems, real-time services, and performant applications.",
 
-  // Assets — place your files in /assets/ folder at project root
-  avatarPath: "/assets/avatar.png",
-  resumePath: "/assets/resume.pdf",
+  avatarPath: "/assets/avatar.jpg",
+  resumePath: "https://drive.google.com/file/d/1U0t_FjcBDlYxu-ybPqRXDAbyuxHQg00i/view",
+  faviconPath: "/assets/image.png",
 
-  // Contact
-  email: "hello@example.com",
+  email: "ayuambatkar@gmail.com",
 
-  // Social links
   socials: {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    github: "https://github.com/ayushambatkar",
+    linkedin: "https://linkedin.com/in/ayushambatkar",
   },
 
-  // Experience
   experiences: [
     {
-      role: "Senior Developer",
-      company: "Tech Corp",
-      period: "2022 — Present",
-      description:
-        "Led development of scalable web applications, improving performance by 40%. Mentored junior developers and established coding standards.",
+      role: "Software Engineering Intern",
+      company: "Flick TV",
+      period: "Apr. 2025 — Present",
+      description: [
+        "Built a caching layer reducing backend API calls by 35%, improving latency for 20k+ DAU",
+        "Integrated Juspay payments SDK for secure transactions",
+        "Built and deployed trials website using Docker on AWS ECS",
+        "Implemented OAuth + JWT authentication reducing login drop-offs by 18%",
+      ],
     },
     {
-      role: "Frontend Developer",
-      company: "Startup Inc",
-      period: "2020 — 2022",
-      description:
-        "Built responsive user interfaces with React and TypeScript. Collaborated with design team to implement pixel-perfect components.",
+      role: "Flutter Developer Intern",
+      company: "Nomad Devs",
+      period: "Sep. 2024 — Nov. 2024",
+      description: [
+        "Reduced app startup time by 50% (6s → 3s) using lazy loading",
+        "Optimized database operations by removing duplicate and redundant queries",
+      ],
     },
     {
-      role: "Junior Developer",
-      company: "Agency Co",
-      period: "2018 — 2020",
-      description:
-        "Developed client websites and internal tools. Gained expertise in modern JavaScript frameworks and CI/CD pipelines.",
+      role: "Software Developer Intern",
+      company: "Ploofypaws",
+      period: "Jun. 2024 — Aug. 2024",
+      description: [
+        "Reduced database read operations by 40% via caching and optimized fetching",
+        "Built live video consultation feature using VideoSDK",
+        "Created Python scripts to batch upload 100+ assets with retry + error handling",
+      ],
     },
   ],
 
-  // Projects
   projects: [
     {
-      title: "Project Alpha",
-      description: "A full-stack web application for managing workflows with real-time collaboration features.",
-      tags: ["React", "TypeScript", "Node.js"],
-      link: "#",
+      title: "Linkwatch - Watch Ya Links",
+      subtitle: "A link tracking and analytics service built with NestJS and Supabase",
+      description: [
+        "Built redirect-based tracking links system",
+        "Captured query params, IP, device metadata, and location",
+        "Stored analytics using Supabase",
+        "Used cron jobs to keep server active and prevent sleep",
+        "Enabled insights on user engagement via link-level analytics",
+      ],
+      tags: ["Supabase", "NestJS", "Prisma", "PostgreSQL", "Cron"],
+      link: "https://linkwatch-in.vercel.app/",
+      githubLink: "https://github.com/ayushambatkar/Linkwatch-Watch_Ya_Links",
     },
     {
-      title: "Project Beta",
-      description: "Mobile-first e-commerce platform with integrated payment processing and analytics dashboard.",
-      tags: ["Next.js", "Stripe", "PostgreSQL"],
-      link: "#",
+      title: "NomNom - Food Delivery Backend Service",
+      subtitle: "A backend service for a food delivery application built with NestJS and PostgreSQL",
+      description: [
+        "Implemented JWT auth with phone + OTP",
+        "Designed PostgreSQL schema with indexing for performance",
+        "Built REST APIs with filtering and pagination",
+        "Added Redis caching reducing DB queries by 40%",
+        "Dockerized and deployed on AWS EC2",
+      ],
+      tags: ["NestJS", "PostgreSQL", "Redis", "Docker", "AWS"],
+      link: "https://nomnom-crave-click-devour.onrender.com/ ",
+      githubLink: "https://github.com/ayushambatkar/NomNom--Crave.Click.Devour.",
     },
     {
-      title: "Project Gamma",
-      description: "Open-source design system and component library used by thousands of developers worldwide.",
-      tags: ["Tailwind", "Storybook", "Figma"],
-      link: "#",
+      title: "Throttle: Distributed Rate Limiter Service",
+      subtitle: "A distributed rate limiter service built with FastAPI and Redis",
+      description: [
+        "Built distributed rate limiter using Redis Lua scripts for atomic updates",
+        "Implemented token bucket and sliding window algorithms",
+        "Exposed REST APIs for backend integration",
+      ],
+      tags: ["FastAPI", "Redis", "Docker"],
+      link: "https://throttle-rate-limiter-service.onrender.com/docs",
+      githubLink: "https://github.com/ayushambatkar/Rate_Limiter_Service",
     },
   ],
 };

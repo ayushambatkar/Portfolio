@@ -1,30 +1,48 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { appConfig } from "@/app_config";
 
 const ProjectsSection = () => {
   return (
     <section id="projects" className="section-padding">
       <div className="max-w-3xl mx-auto">
-        <h2 className="font-display text-3xl md:text-4xl font-bold mb-16 text-gradient">
+        <h2 className="font-display text-3xl md:text-4xl font-bold leading-[1.2] pb-1 mb-16 text-gradient">
           Projects
         </h2>
         <div className="grid gap-6">
           {appConfig.projects.map((project, i) => (
-            <a
+            <div
               key={i}
-              href={project.link}
-              className="group glass rounded-2xl p-6 md:p-8 hover:border-primary/50 transition-all duration-300 block"
+              className="group glass rounded-2xl p-6 md:p-8 hover:border-primary/50 transition-all duration-300"
             >
               <div className="flex items-start justify-between mb-3">
                 <h3 className="font-display text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
-                <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0 mt-1" />
+                <div className="flex items-center gap-3 shrink-0 mt-1">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                    aria-label={`Open live project for ${project.title}`}
+                  >
+                    <ExternalLink className="w-5 h-5" />
+                  </a>
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                    aria-label={`Open GitHub repository for ${project.title}`}
+                  >
+                    <Github className="w-5 h-5" />
+                  </a>
+                </div>
               </div>
-              <p className="text-muted-foreground mb-4 leading-relaxed">
-                {project.description}
-              </p>
-              <div className="flex flex-wrap gap-2">
+              <h6 className="font-display text-md font-light text-muted-foreground group-hover:text-foreground transition-colors mb-4">
+                {project.subtitle}
+              </h6>
+              <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
@@ -34,7 +52,12 @@ const ProjectsSection = () => {
                   </span>
                 ))}
               </div>
-            </a>
+              <ul className="text-muted-foreground leading-relaxed list-disc list-inside space-y-2">
+                {project.description.map((desc, j) => (
+                  <li key={j}>{desc}</li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
       </div>

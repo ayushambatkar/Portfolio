@@ -21,9 +21,11 @@ const ExperienceSection = () => {
                 {exp.role}
               </h3>
               <p className="text-primary font-medium mb-3">{exp.company}</p>
-              <p className="text-muted-foreground leading-relaxed">
-                {exp.description}
-              </p>
+              <ul className="text-muted-foreground leading-relaxed list-disc list-inside space-y-2">
+                {exp.description.map((desc, j) => (
+                  <li key={j}>{desc}</li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

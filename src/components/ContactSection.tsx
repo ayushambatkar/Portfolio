@@ -4,7 +4,6 @@ import { appConfig } from "@/app_config";
 const socialIcons = {
   github: Github,
   linkedin: Linkedin,
-  twitter: Twitter,
 };
 
 const ContactSection = () => {
