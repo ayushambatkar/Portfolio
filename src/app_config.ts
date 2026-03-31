@@ -1,6 +1,6 @@
 export const appConfig = {
   // Personal info
-  name: "Your Name",
+  name: "Ayush Ambatkar",
   title: "A passionate developer crafting beautiful digital experiences. I build things that live on the internet.",
 
   // Assets — place your files in /assets/ folder at project root
