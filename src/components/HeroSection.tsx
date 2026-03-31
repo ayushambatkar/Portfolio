@@ -14,7 +14,8 @@ const HeroSection = () => {
           />
         </div>
         <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tight mb-6 animate-fade-up [animation-delay:0.1s] opacity-0">
-          Hi, I'm <span className="text-gradient">{appConfig.name}</span>
+          <span className="text-white">Hi, I'm </span>
+          <span className="text-gradient">{appConfig.name}</span>
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto mb-10 animate-fade-up [animation-delay:0.2s] opacity-0">
           {appConfig.title}
