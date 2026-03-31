@@ -1,4 +1,4 @@
-import avatarPlaceholder from "@/assets/avatar-placeholder.png";
+import { appConfig } from "@/app_config";
 
 const HeroSection = () => {
   return (
@@ -6,7 +6,7 @@ const HeroSection = () => {
       <div className="max-w-3xl mx-auto text-center">
         <div className="mb-8 animate-fade-up">
           <img
-            src={avatarPlaceholder}
+            src={appConfig.avatarPath}
             alt="Profile photo"
             width={160}
             height={160}
@@ -14,11 +14,10 @@ const HeroSection = () => {
           />
         </div>
         <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tight mb-6 animate-fade-up [animation-delay:0.1s] opacity-0">
-          Hi, I'm <span className="text-gradient">Your Name</span>
+          Hi, I'm <span className="text-gradient">{appConfig.name}</span>
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto mb-10 animate-fade-up [animation-delay:0.2s] opacity-0">
-          A passionate developer crafting beautiful digital experiences. I build
-          things that live on the internet.
+          {appConfig.title}
         </p>
         <div className="flex items-center justify-center gap-4 animate-fade-up [animation-delay:0.3s] opacity-0">
           <a

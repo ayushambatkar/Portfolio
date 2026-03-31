@@ -1,25 +1,5 @@
 import { ExternalLink } from "lucide-react";
-
-const projects = [
-  {
-    title: "Project Alpha",
-    description: "A full-stack web application for managing workflows with real-time collaboration features.",
-    tags: ["React", "TypeScript", "Node.js"],
-    link: "#",
-  },
-  {
-    title: "Project Beta",
-    description: "Mobile-first e-commerce platform with integrated payment processing and analytics dashboard.",
-    tags: ["Next.js", "Stripe", "PostgreSQL"],
-    link: "#",
-  },
-  {
-    title: "Project Gamma",
-    description: "Open-source design system and component library used by thousands of developers worldwide.",
-    tags: ["Tailwind", "Storybook", "Figma"],
-    link: "#",
-  },
-];
+import { appConfig } from "@/app_config";
 
 const ProjectsSection = () => {
   return (
@@ -29,7 +9,7 @@ const ProjectsSection = () => {
           Projects
         </h2>
         <div className="grid gap-6">
-          {projects.map((project, i) => (
+          {appConfig.projects.map((project, i) => (
             <a
               key={i}
               href={project.link}

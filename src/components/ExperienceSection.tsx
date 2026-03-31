@@ -1,26 +1,4 @@
-const experiences = [
-  {
-    role: "Senior Developer",
-    company: "Tech Corp",
-    period: "2022 — Present",
-    description:
-      "Led development of scalable web applications, improving performance by 40%. Mentored junior developers and established coding standards.",
-  },
-  {
-    role: "Frontend Developer",
-    company: "Startup Inc",
-    period: "2020 — 2022",
-    description:
-      "Built responsive user interfaces with React and TypeScript. Collaborated with design team to implement pixel-perfect components.",
-  },
-  {
-    role: "Junior Developer",
-    company: "Agency Co",
-    period: "2018 — 2020",
-    description:
-      "Developed client websites and internal tools. Gained expertise in modern JavaScript frameworks and CI/CD pipelines.",
-  },
-];
+import { appConfig } from "@/app_config";
 
 const ExperienceSection = () => {
   return (
@@ -30,7 +8,7 @@ const ExperienceSection = () => {
           Experience
         </h2>
         <div className="space-y-12">
-          {experiences.map((exp, i) => (
+          {appConfig.experiences.map((exp, i) => (
             <div
               key={i}
               className="group relative pl-8 border-l-2 border-border hover:border-primary transition-colors duration-300"
