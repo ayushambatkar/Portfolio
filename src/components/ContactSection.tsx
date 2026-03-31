@@ -1,10 +1,11 @@
 import { Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { appConfig } from "@/app_config";
 
-const socials = [
-  { icon: Github, label: "GitHub", href: "https://github.com" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-  { icon: Twitter, label: "Twitter", href: "https://twitter.com" },
-];
+const socialIcons = {
+  github: Github,
+  linkedin: Linkedin,
+  twitter: Twitter,
+};
 
 const ContactSection = () => {
   return (
@@ -19,7 +20,7 @@ const ContactSection = () => {
         </p>
 
         <a
-          href="mailto:hello@example.com"
+          href={`mailto:${appConfig.email}`}
           className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-medium text-lg hover:opacity-90 transition-opacity mb-12"
         >
           <Mail className="w-5 h-5" />
@@ -27,22 +28,26 @@ const ContactSection = () => {
         </a>
 
         <div className="flex items-center justify-center gap-6">
-          {socials.map(({ icon: Icon, label, href }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-              className="w-12 h-12 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-            >
-              <Icon className="w-5 h-5" />
-            </a>
-          ))}
+          {Object.entries(appConfig.socials).map(([key, href]) => {
+            const Icon = socialIcons[key as keyof typeof socialIcons];
+            if (!Icon) return null;
+            return (
+              <a
+                key={key}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={key}
+                className="w-12 h-12 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+              >
+                <Icon className="w-5 h-5" />
+              </a>
+            );
+          })}
         </div>
 
         <p className="text-muted-foreground text-sm mt-20">
-          © {new Date().getFullYear()} Your Name. All rights reserved.
+          © {new Date().getFullYear()} {appConfig.name}. All rights reserved.
         </p>
       </div>
     </section>

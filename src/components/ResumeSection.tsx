@@ -1,9 +1,7 @@
 import { FileText } from "lucide-react";
+import { appConfig } from "@/app_config";
 
 const ResumeSection = () => {
-  // Replace this with your actual PDF URL or import
-  const resumeUrl = "";
-
   return (
     <section id="resume" className="section-padding">
       <div className="max-w-3xl mx-auto">
@@ -11,10 +9,10 @@ const ResumeSection = () => {
           Resume
         </h2>
 
-        {resumeUrl ? (
+        {appConfig.resumePath ? (
           <div className="glass rounded-2xl overflow-hidden">
             <iframe
-              src={resumeUrl}
+              src={appConfig.resumePath}
               title="Resume"
               className="w-full h-[80vh] border-0"
             />
@@ -26,7 +24,7 @@ const ResumeSection = () => {
               Resume PDF will be displayed here
             </p>
             <p className="text-muted-foreground text-sm">
-              Upload your PDF and update the <code className="text-primary">resumeUrl</code> in ResumeSection.tsx
+              Place your PDF in <code className="text-primary">/assets/resume.pdf</code>
             </p>
           </div>
         )}
