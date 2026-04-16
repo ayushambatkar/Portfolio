@@ -26,7 +26,7 @@ export const appConfig = {
       ],
     },
     {
-      role: "Flutter Developer Intern",
+      role: "Software Developer Intern",
       company: "Nomad Devs",
       period: "Sep. 2024 — Nov. 2024",
       description: [
