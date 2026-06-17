@@ -2,9 +2,9 @@ export const appConfig = {
   name: "Ayush Ambatkar",
   title: "Software Engineer focused on building scalable backend systems, real-time services, and performant applications.",
 
-  avatarPath: "/assets/avatar.jpg",
+  avatarPath: "/assets/pfp.jpg",
   resumePath: "https://drive.google.com/file/d/1U0t_FjcBDlYxu-ybPqRXDAbyuxHQg00i/view",
-  faviconPath: "/assets/image.png",
+  faviconPath: "/assets/pfp.jpg",
 
   email: "ayuambatkar@gmail.com",
 
@@ -44,9 +44,33 @@ export const appConfig = {
         "Created Python scripts to batch upload 100+ assets with retry + error handling",
       ],
     },
+    {
+      role: "Software Developer Intern",
+      company: "VNIT",
+      tags: ["NestJS", "PostgreSQL", "Redis", "Docker", "AWS"],
+      period: "Feb. 2024 — May 2024",
+      description: [
+        "Developed an Android application that received health data from wristwatch sensors using UART communication",
+        "Stored sensor readings with timestamps in CSV files and an SQLite database"
+      ],
+    },
   ],
 
   projects: [
+    {
+      title: "AgentReview - AI-Powered GitHub PR Reviewer",
+      subtitle: "An AI-powered GitHub App that analyzes pull requests and posts automated code reviews",
+      description: [
+        "Built an AI-powered GitHub App that analyzes pull request diffs and posts inline review comments",
+        "Orchestrated parallel security, code quality, database, and test coverage reviews using LangGraph",
+        "Implemented GitHub App authentication with JWTs, installation tokens, and HMAC-SHA256 webhook verification",
+        "Built a Redis-backed asynchronous review pipeline for reliable and scalable PR processing",
+        "Handled large pull requests through diff reduction and configurable fast and detailed review modes",
+      ],
+      tags: ["FastAPI", "LangGraph", "Redis", "Docker", "GitHub API"],
+      link: "https://github.com/apps/agentreviewbot",
+      githubLink: "https://github.com/ayushambatkar/AgentReview-AI_PR_Reviewer",
+    },
     {
       title: "Linkwatch - Watch Ya Links",
       subtitle: "A link tracking and analytics service built with NestJS and Supabase",
